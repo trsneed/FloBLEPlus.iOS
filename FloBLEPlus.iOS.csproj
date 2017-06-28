@@ -48,14 +48,11 @@
   <ItemGroup>
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
   <ItemGroup>
-    <NativeReference Include="flomio_drivers_ios\ACR1255U\Library\libACSBluetooth.a">
+    <NativeReference Include="flomio_drivers_ios\libACSBluetooth.a">
       <Kind>Static</Kind>
-      <SmartLink>True</SmartLink>
-      <Frameworks>MediaPlayer</Frameworks>
-      <LinkerFlags>-lc++ -ObjC</LinkerFlags>
-      <IsCxx>True</IsCxx>
+      <SmartLink>False</SmartLink>
     </NativeReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>
